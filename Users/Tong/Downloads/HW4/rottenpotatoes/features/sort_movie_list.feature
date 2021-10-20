@@ -27,7 +27,9 @@ Background: movies have been added to database
 Scenario: sort movies alphabetically
   When I follow "Movie Title"
   Then I should see "Aladdin" before "Amelie"
+  And I should not see "Amelie" before "Aladdin"
 
 Scenario: sort movies in increasing order of release date
   When I follow "Release Date"
   Then I should see "2001: A Space Odyssey" before "The Incredibles"
+  And I should not see "The Incredibles" before "2001: A Space Odyssey"

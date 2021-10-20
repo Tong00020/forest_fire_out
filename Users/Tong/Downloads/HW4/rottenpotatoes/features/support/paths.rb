@@ -14,10 +14,10 @@ module NavigationHelpers
     case page_name
 
     when /^the home\s?page$/
-      '/'
+      movies_path
 
     when /^the RottenPotatoes home page/
-      '/movies'
+      movies_path
 
     when /^the Create New Movie page/
       '/movies/new'
@@ -27,6 +27,17 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
+
+    when /^the edit page for "(.*)"$/
+    edit_movie_path(Movie.find_by(title: $1).id)
+    
+    when /^the details page for "(.*)"$/
+    movie_path(Movie.find_by(title: $1).id)
+  
+    when /the Similar Movies page for "(.*)"$/
+      @movie_id = Movie.find_by_title($1)
+      movie_similar_path(@movie_id)
+
 
     else
       begin
