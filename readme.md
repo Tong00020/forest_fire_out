@@ -29,7 +29,9 @@ Executar o comando $ mesa runserver forest_fire_out
 ## Descrição das variáveis armazenadas no arquivo CSV
 
 Nos arquivos .csv quando "rain = 0" podemos ver que a área é quase totalmente ou totalmente queimada, dependendo da variável densidade (quanto menor a densidade menos árvores queimadas).
+
 Com a variável "rain" cada vez mais próximo do valor 0.6, mais áreas verdes aparecem e mais há mais árvores salvas.
+
 Por fim, com a variável "rain" acima de 0.6, as áreas queimadas são baixas e a quantidade de árvores salvas também é baixa, uma vez que é difícil o fogo espalhar com o valor de "rain" alto.
 
 ## Summary original model
